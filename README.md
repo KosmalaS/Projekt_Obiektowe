@@ -1,4 +1,2 @@
 # Projekt_Obiektowe
-Projekt zaliczeniowy na Programowanie Obiektowe
-
-Opis pojawi się po zajęciach 06.12
+Projekt polega na liczeniu i szukaniu korelacji między ilością samobójstw, ceną akcji applea i cenie złota. Użytkownik będzie mógł wybrać m. in.: przedział czasowy, sposób liczenia korelacji, zbióry, między którymi liczona będzie korelacja.
