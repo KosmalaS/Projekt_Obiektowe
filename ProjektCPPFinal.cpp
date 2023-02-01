@@ -86,17 +86,17 @@ vector<vector<string>> read_csv( const string& file_name ) {
 	string line; 
 
 	while( getline( file, line ) ) { // dopoki jest linia do przeczytania
-		vector<string> row; //pusty wektor stringow
-		int pos = 0; // pozycja przecinka
-		string field; //field trzyma pozycje w linii
+		vector<string> row; 
+		int pos = 0;
+		string field; 
 
 		while( (pos = line.find( ',' )) != string::npos ) { // dopoki jest przecinek w linii
 			field = line.substr( 0, pos ); // wszystko do przecinka leci do fielda
-			row.push_back( field ); // dodaje element do wektora row
+			row.push_back( field );
 			line.erase( 0, pos + 1 ); // usuwa field+przecinek
 		}
 		row.push_back( line ); // za ostatnim przecinkeim
-		data.push_back( row ); // push the row into the data
+		data.push_back( row );
 	}
 	return data;
 }
