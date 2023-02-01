@@ -259,9 +259,9 @@ int main() {
 		if( input == 2 ) {
 
 			// map<ROK, WARTOSC>
-			map<int, int> year_sum_suicides; //roczna suma samobójstw
-			map<int, double> year_avg_apple_price; //roczny sredni stock appla
-			map<int, int> counts; // roczna ilosc notowan appla
+			map<int, int> year_sum_suicides; 
+			map<int, double> year_avg_apple_price; 
+			map<int, int> counts; 
 
 			//suma samobojstw coroczna
 			for( const auto& s : suicides ) {
@@ -275,15 +275,6 @@ int main() {
 			}
 			for( auto& a : year_avg_apple_price ) {
 				a.second /= counts.find( a.first )->second;
-			}
-
-			//usuwamy zbedne lata
-			for( const auto& a : year_avg_apple_price )
-			{
-				if( year_sum_suicides.find( a.first ) == year_sum_suicides.end() ) {
-					year_avg_apple_price.erase( a.first );
-					year_sum_suicides.erase( a.first );
-				}
 			}
 
 
@@ -328,13 +319,6 @@ int main() {
 
 				for( auto& a : year_avg_gold_price ) {
 					a.second /= counts.find( a.first )->second;
-				}
-
-				for( const auto& a : year_avg_gold_price ) {
-					if( year_sum_suicides.find( a.first ) == year_sum_suicides.end() ) {
-						year_avg_gold_price.erase( a.first );
-						year_sum_suicides.erase( a.first );
-					}
 				}
 
 				int year_start, year_end;
