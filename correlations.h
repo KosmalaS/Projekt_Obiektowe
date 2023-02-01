@@ -16,9 +16,4 @@ double pearson_correlation( vector<double>& x, vector<double>& y );
 
 double spearman_correlation( vector<double>& x, vector<double>& y );
 
-typedef pair<double, double> Point;
-int countConcordantPairs( const vector<Point>& points );
-int countDiscordantPairs( const vector<Point>& points );
-double kendall_correlation( vector<double>& x, vector<double>& y );
-
 vector<double> cross_correlation( const vector<double>& x, const vector<double>& y );
